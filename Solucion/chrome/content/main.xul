@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window id="main" title="3D Graph Viewer" width="700" height="700" 
+           xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		   xmlns:html="http://www.w3.org/1999/xhtml">
+  <script type="application/javascript" src="chrome://GUI1/content/main.js"/>
+  <script type="application/javascript" src="chrome://GUI1/content/d3.v2.js"/>
+  <script type="text/javascript" src="chrome://GUI1/content/canvas3DGraph.js"/> 
+  <script type="text/javascript" src="chrome://GUI1/content/graph.js"/>
+  <menubar id="viewer-menubar">
+    <menu id="file-menu" label="File">
+      <menupopup id="file-popup">
+        <menuitem label="Open" oncommand="file.open()" />
+      </menupopup>
+    </menu>
+  </menubar>
+  <html:div id="g-holder">  
+    <html:div id="canvasDiv">  
+        <html:canvas id="graph" width="600" height="600"></html:canvas>  
+        <html:div id="gInfo"></html:div>   
+    </html:div>  
+    <html:div id="controls">   
+    </html:div>  
+  </html:div> 
+  <box flex="1"/>
+</window>
